@@ -66,3 +66,8 @@ Helicoptero::~Helicoptero()
 	resistencia = 0;
 	municion = 0;
 }
+
+void Helicoptero::Tostring() {
+	cout << "Helicoptero" << endl; 
+	cout << "Nombre: " << Helicoptero::nombre << ", Tipo de Arma: " << Helicoptero::tipoarma << ", Velocidad: " << Helicoptero::velocidad << ", Resistencia: " << Helicoptero::resistencia << ", Municion: " << Helicoptero::municion << endl; 
+}

@@ -5,15 +5,16 @@
 class Campo_de_Batalla : public Helicoptero
 {
 private:
-	Helicoptero* helicoptero;
-	vector<unique_ptr<Helicoptero>>* helicoptero;
+	vector <Helicoptero*> listahelicoptero;
+	int opcion; 
 public:
-	void AgregarHelicóptero(Helicoptero* helicoptero);
+	void AgregarHelicoptero(Helicoptero* helicoptero1);
 	void MostrarInformación();
 	void SimularBatalla(Helicoptero* helicoptero1, Helicoptero* helicoptero2);
-    double ataque() override;
-	Campo_de_Batalla();
-	Campo_de_Batalla();
+	Campo_de_Batalla(vector<Helicoptero*> helicoptero, int opcion);
+	~Campo_de_Batalla();
+	vector<Helicoptero*> getlistahelicoptero();
+	void setlistahelicoptero(vector<Helicoptero*> listahelicoptero);
 	
 };
 

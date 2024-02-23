@@ -30,6 +30,7 @@ public:
 	int getmunicion();
 	void setmunicion(int municion);
 	~Helicoptero(); 
+	void Tostring(); 
 
 };
 

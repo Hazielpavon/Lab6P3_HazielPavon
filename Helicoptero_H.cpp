@@ -3,9 +3,11 @@
 #include <iostream>
 using namespace std;
 
+
+
 double Helicoptero_H::ataque()
 {
-	// pendiente 
+	return 0.0;
 }
 
 Helicoptero_H::Helicoptero_H(string nombre, string tipoarma, int velocidad, double resistencia, int municion, string tipomisil) :
@@ -22,13 +24,16 @@ string Helicoptero_H::gettipomisil()
 	return tipomisil;
 }
 
-void Helicoptero_H::settipomisil(string tipomisil)
+void Helicoptero_H::settipomisil(string tipomisilx)
 {
-	this->tipomisil = tipomisil;
+	this->tipomisil = tipomisilx;
 }
 
 Helicoptero_H::~Helicoptero_H()
 {
 	tipomisil = " ";
 
+}
+void Helicoptero_H::Tostring() {
+	cout << "Tipo de Misil: " << Helicoptero_H::tipomisil << endl;
 }

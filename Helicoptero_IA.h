@@ -17,5 +17,6 @@ public:
 	~Helicoptero_IA();
 	string getinteligenciacohete();
 	void setinteligenciacohete(string inteligenciacohete);
+	void Tostring(); 
 };
 
