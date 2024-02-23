@@ -1,20 +1,46 @@
-// Lab6P3_HazielPavon.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
+using namespace std;
 
+void ejercicio1() {
+	cout << "**Simulacion de Batalla de Helicopteros**" << endl;
+	cout << endl;
+	cout << "1. Agregar Helicopteros" << endl;
+	cout << "2. Mostrar informacion de Helicopteros" << endl;
+	cout << "3. Simular batalla" << endl;
+	cout << "4. Salir" << endl;
+	cout << endl;
+	cout << "Ingrese una opcion: ";
+	int opcion;
+	cin >> opcion;
+	bool vali = true;
+	while (vali) {
+		switch (opcion) {
+		case 1:
+
+
+
+
+
+			break;
+		case 2:
+
+			break;
+		case 3:
+
+			break;
+		case 4:
+			cout << "Saliendo..." << endl; 
+			vali = false; 
+			break;
+
+		default:
+			cout << "Ingrese una opcion correcta" << endl;
+			break;
+
+		}
+	}
+}
 int main()
 {
-    std::cout << "Hello World!\n";
+	ejercicio1(); 
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
