@@ -16,7 +16,7 @@ private:
 
 public: 
 
-	virtual double ataque(int vida, string tipoarma, int municion, int velocidad) const;
+	virtual double ataque() = 0;
 	Helicoptero(string nombre, string tipoarma, int velocidad, double resistencia, int municion); 
 	Helicoptero(); 
 	string getnombre(); 

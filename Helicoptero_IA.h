@@ -11,21 +11,11 @@ private:
 
 
 public: 
-	double ataque(int vida, string tipoarma, int municion, int velocidad) const override;
+	double ataque() override;
 	Helicoptero_IA(string nombre, string tipoarma, int velocidad, double resistencia, int municion, string inteligenciacohete);
 	Helicoptero_IA();
-	string getnombre();
-	void setnombre(string nombre);
-	string gettipoarma();
-	void settipoarma(string tipoarma);
-	int getvelocidad();
-	void setvelocidad(int velocidad);
-	double getresistencia();
-	void setresistencia(double resistencia);
-	int getmunicion();
-	void setmunicion(int municion);
+	~Helicoptero_IA();
 	string getinteligenciacohete();
 	void setinteligenciacohete(string inteligenciacohete);
-	~Helicoptero_IA();
 };
 
