@@ -1,20 +1,24 @@
-#pragma once
-#include <memory>
+#ifndef CAMPO_DE_BATALLA_H
+#define CAMPO_DE_BATALLA_H
+
 #include <vector>
 #include "Helicoptero.h"
-class Campo_de_Batalla : public Helicoptero
-{
+
+class Campo_de_Batalla {
 private:
-	vector <Helicoptero*> listahelicoptero;
-	int opcion; 
+    vector<Helicoptero*> listaHelicopteros;
+
 public:
-	void AgregarHelicoptero(Helicoptero* helicoptero1);
-	void MostrarInformación();
-	void SimularBatalla(Helicoptero* helicoptero1, Helicoptero* helicoptero2);
-	Campo_de_Batalla(vector<Helicoptero*> helicoptero, int opcion);
-	~Campo_de_Batalla();
-	vector<Helicoptero*> getlistahelicoptero();
-	void setlistahelicoptero(vector<Helicoptero*> listahelicoptero);
-	
+    Campo_de_Batalla();
+    ~Campo_de_Batalla();
+
+    void AgregarHelicoptero(Helicoptero* helicoptero);
+    void MostrarInformacion();
+    void SimularBatalla(Helicoptero* helicoptero1, Helicoptero* helicoptero2);
+
+    std::vector<Helicoptero*> getListaHelicopteros();
+    void setListaHelicopteros(std::vector<Helicoptero*> _listaHelicopteros);
 };
+
+#endif
 

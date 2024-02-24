@@ -1,19 +1,19 @@
 #include "Helicoptero.h"
-#include <iostream>
-using namespace std;
-#pragma once
-class Helicoptero_H : public Helicoptero
-{
-private:
-	string tipomisil;
-	// antibombas, fulminante, reforzado 
+#ifndef HELICOPTERO_H_H
+#define HELICOPTERO_H_H
+class Helicoptero_H : public Helicoptero {
 public:
-	double ataque() override;
-	Helicoptero_H(string nombre, string tipoarma, int velocidad, double resistencia, int municion, string tipomisil);
-	Helicoptero_H();
-	string gettipomisil();
-	void settipomisil(string tipomisil);
-	~Helicoptero_H();
-	void Tostring();
+    string tipoMisil = " ";
 
+   /* Helicoptero_H();*/ // no funcionan no se porque HAHA
+    Helicoptero_H(string _nombre, string _tipoArmaEquipada, int _velocidad, int _resistencia, int _municion, string _tipoMisil);
+  /*  ~Helicoptero_H();*/
+
+    double Atacar() override;
+
+    // Getters y setters
+    string getTipoMisil()const;
+    void setTipoMisil(string _tipoMisil);
 };
+
+#endif

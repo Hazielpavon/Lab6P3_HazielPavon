@@ -1,73 +1,48 @@
 #include "Helicoptero.h"
 
-Helicoptero::Helicoptero(string nombre, string tipoarma, int velocidad, double resistencia, int municion) :
-	nombre(nombre), tipoarma(tipoarma), velocidad(velocidad), resistencia(resistencia), municion(municion)
-{}
-Helicoptero::Helicoptero()
-{
-	// constructor vacio 
+Helicoptero::Helicoptero() {}
+
+Helicoptero::Helicoptero(string _nombre, string _tipoArmaEquipada, int _velocidad, double _resistencia, int _municion) :
+    nombre(_nombre), tipoArmaEquipada(_tipoArmaEquipada), velocidad(_velocidad), resistencia(_resistencia), municion(_municion) {}
+
+Helicoptero::~Helicoptero() {}
+
+string Helicoptero::getNombre() const{
+    return nombre;
 }
 
-string Helicoptero::getnombre()
-{
-	return nombre;
+void Helicoptero::setNombre(string _nombre) {
+    this-> nombre = _nombre;
 }
 
-void Helicoptero::setnombre(string nombre)
-{
-	this->nombre = nombre;
+string Helicoptero::getTipoArmaEquipada()const {
+    return tipoArmaEquipada;
 }
 
-string Helicoptero::gettipoarma()
-{
-	return tipoarma;
+void Helicoptero::setTipoArmaEquipada(string _tipoArmaEquipada) {
+    this-> tipoArmaEquipada = _tipoArmaEquipada;
 }
 
-void Helicoptero::settipoarma(string tipoarma)
-{
-	this->tipoarma = tipoarma;
+int Helicoptero::getVelocidad() const {
+    return velocidad;
 }
 
-int Helicoptero::getvelocidad()
-{
-	return velocidad;
+void Helicoptero::setVelocidad(int _velocidad) {
+    this-> velocidad = _velocidad;
 }
 
-void Helicoptero::setvelocidad(int velocidad)
-{
-	this->velocidad = velocidad;
+double Helicoptero::getResistencia() const {
+    return resistencia;
 }
 
-double Helicoptero::getresistencia()
-{
-	return resistencia;
+void Helicoptero::setResistencia(double _resistencia) {
+   this-> resistencia = _resistencia;
 }
 
-void Helicoptero::setresistencia(double resistencia)
-{
-	this->resistencia = resistencia;
+int Helicoptero::getMunicion() const {
+    return municion;
 }
 
-int Helicoptero::getmunicion()
-{
-	return municion;
-}
-
-void Helicoptero::setmunicion(int municion)
-{
-	this->municion = municion;
-}
-
-Helicoptero::~Helicoptero()
-{
-	nombre = " ";
-	tipoarma = " ";
-	velocidad = 0;
-	resistencia = 0;
-	municion = 0;
-}
-
-void Helicoptero::Tostring() {
-	cout << "Helicoptero" << endl; 
-	cout << "Nombre: " << Helicoptero::nombre << ", Tipo de Arma: " << Helicoptero::tipoarma << ", Velocidad: " << Helicoptero::velocidad << ", Resistencia: " << Helicoptero::resistencia << ", Municion: " << Helicoptero::municion << endl; 
+void Helicoptero::setMunicion(int _municion) {
+    this-> municion = _municion;
 }

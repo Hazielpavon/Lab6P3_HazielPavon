@@ -1,39 +1,20 @@
 #include "Helicoptero_H.h"
-#include "Helicoptero.h" 
 #include <iostream>
 using namespace std;
 
 
+Helicoptero_H::Helicoptero_H(string _nombre, string _tipoArmaEquipada, int _velocidad, int _resistencia, int _municion, string _tipoMisil) :
+    Helicoptero(_nombre, _tipoArmaEquipada, _velocidad, _resistencia, _municion), tipoMisil(_tipoMisil) {}
 
-double Helicoptero_H::ataque()
-{
-	return 0.0;
+double Helicoptero_H::Atacar() {
+    double danioTotal = (10 + (20 * 5)) * (1.0 + (velocidad / 100.0));
+    return danioTotal;
 }
 
-Helicoptero_H::Helicoptero_H(string nombre, string tipoarma, int velocidad, double resistencia, int municion, string tipomisil) :
-	Helicoptero(nombre, tipoarma, velocidad, resistencia, municion), tipomisil(tipomisil)
-{}
-
-Helicoptero_H::Helicoptero_H()
-{
-	// constructor vacio 
+string Helicoptero_H::getTipoMisil() const{
+    return tipoMisil;
 }
 
-string Helicoptero_H::gettipomisil()
-{
-	return tipomisil;
-}
-
-void Helicoptero_H::settipomisil(string tipomisilx)
-{
-	this->tipomisil = tipomisilx;
-}
-
-Helicoptero_H::~Helicoptero_H()
-{
-	tipomisil = " ";
-
-}
-void Helicoptero_H::Tostring() {
-	cout << "Tipo de Misil: " << Helicoptero_H::tipomisil << endl;
+void Helicoptero_H::setTipoMisil(string _tipoMisil) {
+    this-> tipoMisil = _tipoMisil;
 }

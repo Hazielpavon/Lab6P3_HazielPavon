@@ -1,40 +1,37 @@
-#pragma once
-#include <iostream>
-using namespace std; 
-class Helicoptero
-{
-private: 
-	string nombre; 
-	string tipoarma; 
-	// cohete misil 
-	int velocidad; 
-	// 100-400 
-	double resistencia;
-	// (vida) 100-200 
-	int municion; 
-	//5-30 
+#ifndef HELICOPTERO_H
+#define HELICOPTERO_H
+#include <string>
+using namespace std;
 
-public: 
 
-	virtual double ataque() = 0;
-	Helicoptero(string nombre, string tipoarma, int velocidad, double resistencia, int municion); 
-	Helicoptero(); 
-	string getnombre(); 
-	void setnombre(string nombre); 
-	string gettipoarma();
-	void settipoarma(string tipoarma);
-	int getvelocidad();
-	void setvelocidad(int velocidad);
-	double getresistencia();
-	void setresistencia(double resistencia);
-	int getmunicion();
-	void setmunicion(int municion);
-	~Helicoptero(); 
-	void Tostring(); 
+class Helicoptero {
+public:
+    string nombre = " ";
+    string tipoArmaEquipada = " ";
+    int velocidad = 0;
+    double resistencia= 0;
+    int municion=0;
+    Helicoptero();
+    Helicoptero(string _nombre, string _tipoArmaEquipada, int _velocidad, double _resistencia, int _municion);
+    virtual ~Helicoptero();
 
+    virtual double Atacar() = 0;
+
+    string getNombre()const; 
+    void setNombre(string _nombre) ;
+    string getTipoArmaEquipada() const;
+    void setTipoArmaEquipada(string _tipoArmaEquipada);
+    int getVelocidad() const;
+    void setVelocidad(int _velocidad);
+    double getResistencia()const;
+    void setResistencia(double _resistencia);
+    int getMunicion()const;
+    void setMunicion(int _municion);
 };
 
-//ejemplo getters y setters 
+#endif 
+
+//ejemplo getters y setters si no se me olvida 
 
 //string getModelo();
 //void setModelo(string modelo);

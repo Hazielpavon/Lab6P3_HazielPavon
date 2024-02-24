@@ -2,21 +2,19 @@
 #include <iostream>
 #include "Helicoptero.h" 
 using namespace std;
-class Helicoptero_IA : public Helicoptero
-{
-private:
-	string inteligenciacohete;
-	Helicoptero* helicoptero;
-	//  “Principiante”, “Intermedio” o “Avanzado"
+class Helicoptero_IA : public Helicoptero {
+public:
+    string inteligenciaCohete = " ";
 
+    Helicoptero_IA();
+    Helicoptero_IA(string _nombre, string _tipoArmaEquipada, int _velocidad, int _resistencia, int _municion, string _inteligenciaCohete);
+    ~Helicoptero_IA();
 
-public: 
-	double ataque() override;
-	Helicoptero_IA(string nombre, string tipoarma, int velocidad, double resistencia, int municion, string inteligenciacohete);
-	Helicoptero_IA();
-	~Helicoptero_IA();
-	string getinteligenciacohete();
-	void setinteligenciacohete(string inteligenciacohete);
-	void Tostring(); 
+    double Atacar() override;
+
+    string getInteligenciaCohete()const;
+    void setInteligenciaCohete(string _inteligenciaCohete);
 };
+
+
 

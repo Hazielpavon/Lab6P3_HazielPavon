@@ -1,36 +1,21 @@
 #include "Helicoptero_IA.h"
-#include "Helicoptero.h" 
-double Helicoptero_IA::ataque()
-{
-	// pendiente 
-	return 0.0; 
+Helicoptero_IA::Helicoptero_IA() {}
+
+Helicoptero_IA::Helicoptero_IA(string _nombre, string _tipoArmaEquipada, int _velocidad, int _resistencia, int _municion, string _inteligenciaCohete) :
+    Helicoptero(_nombre, _tipoArmaEquipada, _velocidad, _resistencia, _municion), inteligenciaCohete(_inteligenciaCohete) {}
+
+Helicoptero_IA::~Helicoptero_IA() {}
+
+double Helicoptero_IA::Atacar() {
+    double danioTotal = (5 + (10 * 2)) * (1.0 + (velocidad / 100.0));
+    return danioTotal;
 }
 
-Helicoptero_IA::Helicoptero_IA(string nombre, string tipoarma, int velocidad, double resistencia, int municion, string inteligenciacohete)
-	:
-	Helicoptero(nombre, tipoarma, velocidad, resistencia, municion), inteligenciacohete(inteligenciacohete) 
-{}
-
-Helicoptero_IA::Helicoptero_IA()
-{
-	// constructor vacio 
+string Helicoptero_IA::getInteligenciaCohete()const {
+    return inteligenciaCohete;
 }
 
-Helicoptero_IA::~Helicoptero_IA()
-{
-	inteligenciacohete = " "; 
+void Helicoptero_IA::setInteligenciaCohete(string _inteligenciaCohete) {
+    this-> inteligenciaCohete = _inteligenciaCohete;
 }
 
-string Helicoptero_IA::getinteligenciacohete()
-{
-	return inteligenciacohete;
-}
-
-void Helicoptero_IA::setinteligenciacohete(string inteligenciacohete)
-{
-	this->inteligenciacohete = inteligenciacohete; 
-}
-
-void Helicoptero_IA::Tostring() {
-	cout << Helicoptero_IA::inteligenciacohete << endl; 
-}
